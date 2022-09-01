@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6ff9545e10.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css\user.css" />
+    <link rel="stylesheet" href="css\port.css" />
+
+    <title>user dashboard</title>
+  </head>
+  <body>
+    <div id="loader">
+      <svg
+        version="1.1"
+        id="L3"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 100 100"
+        enable-background="new 0 0 0 0"
+        xml:space="preserve"
+      >
+        <circle
+          fill="none"
+          stroke="#fff"
+          stroke-width="4"
+          cx="50"
+          cy="50"
+          r="44"
+          style="opacity: 0.5"
+        />
+        <circle
+          fill="#fff"
+          stroke="#e74c3c"
+          stroke-width="3"
+          cx="8"
+          cy="54"
+          r="6"
+        >
+          <animateTransform
+            attributeName="transform"
+            dur="2s"
+            type="rotate"
+            from="0 50 48"
+            to="360 50 52"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </svg>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light align-items-center">
+      <a
+        class="navbar-brand mx-5"
+        href="https://www.surgeproxies.com/"
+        target="_blank"
+        ><img class="logo" src="image\logo.svg" alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNavAltMarkup"
+      >
+        <div class="navbar-nav">
+          <a class="nav-link mx-3" href="/"><p class="menu m-0">Home</p> </a>
+          <a class="nav-link mx-3" href="proxy.html"
+            ><p class="menu click m-0">Proxies</p></a
+          >
+          <a
+            class="nav-link mx-3"
+            href="
+          https://discord.gg/GMF2YBA2RV"
+            ><p class="menu m-0">
+              <i class="fab fa-discord mr-1"></i> Contact
+            </p></a
+          >
+        </div>
+
+        <button class="ml-auto mx-5 p-2" type="button">
+          <p class="name m-0">Logout</p>
+        </button>
+      </div>
+    </nav>
+    <main
+      class="container-fluid d-flex flex-grow-1 justify-content-center position-relative"
+    >
+      <!-- <img class="background" src="image\background.svg" alt="background"> -->
+      <div class="row no-gutters">
+        <div class="user col-sm-12 col-md-12 col-lg-5">
+          <div class="proxies section p-4">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="pills-brute-tab"
+                  data-toggle="pill"
+                  href="#pills-brute"
+                  role="tab"
+                  aria-controls="pills-brute"
+                  aria-selected="true"
+                  >Brute</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="pills-profile-tab"
+                  data-toggle="pill"
+                  href="#pills-profile"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                  >Stable/Aio</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="pills-contact-tab"
+                  data-toggle="pill"
+                  href="#pills-contact"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                  >Pool 3</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="pills-isp-tab"
+                  data-toggle="pill"
+                  href="#pills-isp"
+                  role="tab"
+                  aria-controls="pills-isp"
+                  aria-selected="false"
+                  >ISP</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content scrollbar-msg p-4" id="pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="pills-brute"
+                role="tabpanel"
+                aria-labelledby="pills-brute-tab"
+              >
+                Brute Residentials not availible
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-profile"
+                role="tabpanel"
+                aria-labelledby="pills-profile-tab"
+              >
+                Stable/Aio Residentials not availible
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-contact"
+                role="tabpanel"
+                aria-labelledby="pills-contact-tab"
+              >
+                Pool 3 not availible
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-isp"
+                role="tabpanel"
+                aria-labelledby="pills-isp-tab"
+              >
+                ISPs not availible
+              </div>
+            </div>
+            <div class="btns mt-3">
+              <button type="button" class="btn btn-info mr-3">Download</button>
+              <button type="button" class="btn btn-primary">Copy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="proxy col-sm-12 col-md-12 col-lg-7">
+          <div class="plan d-flex flex-column">
+            <div class="tabPackages mb-3">
+              <div
+                class="tabPackage section"
+                id="brutePackage"
+                onclick="toggle(this)"
+              >
+                <span>Package:</span>
+                <p class="m-0">Brute</p>
+                <!-- <img src="image\surgewhite.svg" alt="logo" /> -->
+              </div>
+              <div
+                class="tabPackage section mx-3"
+                id="stablePackage"
+                onclick="toggle(this)"
+              >
+                <span>Package:</span>
+                <p class="m-0">Stable/Aio</p>
+                <!-- <img src="image\surgewhite.svg" alt="logo" /> -->
+              </div>
+              <div
+                class="tabPackage section"
+                onclick="toggle(this)"
+                id="poolPackage"
+              >
+                <span>Package:</span>
+                <p class="m-0">Pool3</p>
+                <!-- <img src="image\surgewhite.svg" alt="logo" /> -->
+              </div>
+            </div>
+            <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link section tabPackage active"
+                  id="pills-brutep-tab"
+                  data-toggle="pill"
+                  href="#pills-brutep"
+                  role="tab"
+                  aria-controls="pills-brutep"
+                  aria-selected="true"
+                  >Brute
+                </a>
+              </li>
+              <li class="nav-item mx-4" role="presentation">
+                <a
+                  class="nav-link section tabPackage"
+                  id="pills-stable-tab"
+                  data-toggle="pill"
+                  href="#pills-stable"
+                  role="tab"
+                  aria-controls="pills-stable"
+                  aria-selected="false"
+                  >Stable/Aio</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link section tabPackage"
+                  id="pills-poolnew-tab"
+                  data-toggle="pill"
+                  href="#pills-poolnew"
+                  role="tab"
+                  aria-controls="pills-poolnew"
+                  aria-selected="false"
+                  >Pool 3</a
+                >
+              </li>
+            </ul> -->
+
+            <div class="ip tab-content p-4" id="brute">
+              <div
+                class="tab-pane fade show active"
+                id="pills-brutep-tab"
+                role="tabpanel"
+                aria-labelledby="pills-brutep-tab"
+              >
+                <div class="stores d-flex flex-column scrollbar-light-blue">
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\shopify.png" alt="shopify" />
+                    </div>
+                    Shopify
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\nike.png" alt="logo" />
+                    </div>
+                    Nike
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\adidas.png" alt="logo" />
+                    </div>
+                    Adidas
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\ys.png" alt="logo" />
+                    </div>
+                    Yeezy Supply
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\supreme.png" alt="logo" />
+                    </div>
+                    Supreme
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\footsites.png" alt="logo" />
+                    </div>
+                    Footsites
+                  </div>
+                </div>
+                <div class="gen">
+                  <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Select Type:</label>
+                      <div class="c-dropdown js-dropdown mr-1">
+                        <input
+                          type="hidden"
+                          name="Framework"
+                          id="Framework"
+                          class="js-dropdown__input"
+                        />
+                        <span
+                          class="c-button c-button--dropdown js-dropdown__current"
+                          >IP Type</span
+                        >
+                        <ul class="c-dropdown__list">
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            Static
+                          </li>
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            Dynamic
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2"
+                        >Select Country:</label
+                      >
+                      <div class="c-dropdown js-dropdown mr-1">
+                        <input
+                          type="hidden"
+                          name="Framework"
+                          id="Framework"
+                          class="js-dropdown__input"
+                        />
+                        <span
+                          class="c-button c-button--dropdown js-dropdown__current"
+                          >Country</span
+                        >
+                        <ul class="c-dropdown__list">
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            UK
+                          </li>
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            US
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Proxy Amount:</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="form-group d-flex">
+                      <button type="reset" class="btn btn-danger mr-3">
+                        Reset
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Generate
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="ip tab-content p-4 inactive" id="stable">
+              <div
+                class="tab-pane fade show active"
+                id="pills-brutep-tab"
+                role="tabpanel"
+                aria-labelledby="pills-brutep-tab"
+              >
+                <div class="stores d-flex flex-column scrollbar-light-blue">
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\shopify.png" alt="shopify" />
+                    </div>
+                    Shopify
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\nike.png" alt="logo" />
+                    </div>
+                    Nike
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\adidas.png" alt="logo" />
+                    </div>
+                    Adidas
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\ys.png" alt="logo" />
+                    </div>
+                    Yeezy Supply
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\supreme.png" alt="logo" />
+                    </div>
+                    Supreme
+                  </div>
+                  <div
+                    class="store d-flex justify-content-between align-items-center"
+                    onclick="activate(this)"
+                  >
+                    <div>
+                      <img src="image\footsites.png" alt="logo" />
+                    </div>
+                    Footsites
+                  </div>
+                </div>
+                <div class="gen">
+                  <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Select Type:</label>
+                      <div class="c-dropdown js-dropdown mr-1">
+                        <input
+                          type="hidden"
+                          name="Framework"
+                          id="Framework"
+                          class="js-dropdown__input"
+                        />
+                        <span
+                          class="c-button c-button--dropdown js-dropdown__current"
+                          >IP Type</span
+                        >
+                        <ul class="c-dropdown__list">
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            Static
+                          </li>
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            Dynamic
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2"
+                        >Select Country:</label
+                      >
+                      <div class="c-dropdown js-dropdown mr-1">
+                        <input
+                          type="hidden"
+                          name="Framework"
+                          id="Framework"
+                          class="js-dropdown__input"
+                        />
+                        <span
+                          class="c-button c-button--dropdown js-dropdown__current"
+                          >Country</span
+                        >
+                        <ul class="c-dropdown__list">
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            UK
+                          </li>
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            US
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Proxy Amount:</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="form-group d-flex">
+                      <button type="reset" class="btn btn-danger mr-3">
+                        Reset
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Generate
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="ip tab-content p-4 inactive" id="pool">
+              <div
+                class="tab-pane fade show active"
+                id="pills-brutep-tab"
+                role="tabpanel"
+                aria-labelledby="pills-brutep-tab"
+              >
+                <div class="gen">
+                  <form>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Select Type:</label>
+                      <div class="c-dropdown js-dropdown mr-1">
+                        <input
+                          type="hidden"
+                          name="Framework"
+                          id="Framework"
+                          class="js-dropdown__input"
+                        />
+                        <span
+                          class="c-button c-button--dropdown js-dropdown__current"
+                          >IP Type</span
+                        >
+                        <ul class="c-dropdown__list">
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            Static
+                          </li>
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            Dynamic
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput2"
+                        >Select Country:</label
+                      >
+                      <div class="c-dropdown js-dropdown mr-1">
+                        <input
+                          type="hidden"
+                          name="Framework"
+                          id="Framework"
+                          class="js-dropdown__input"
+                        />
+                        <span
+                          class="c-button c-button--dropdown js-dropdown__current"
+                          >Country</span
+                        >
+                        <ul class="c-dropdown__list">
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            UK
+                          </li>
+                          <li
+                            class="c-dropdown__item"
+                            data-dropdown-value="angular"
+                          >
+                            US
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="formGroupExampleInput">Proxy Amount:</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="formGroupExampleInput"
+                        placeholder="0"
+                      />
+                    </div>
+                    <div class="form-group d-flex">
+                      <button type="reset" class="btn btn-danger mr-3">
+                        Reset
+                      </button>
+                      <button type="button" class="btn btn-success">
+                        Generate
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© SurgeProxies</p>
+      <a href="https://twitter.com/foxydraft" target="_blank">
+        <p class="foxy">🦊</p>
+      </a>
+    </main>
+    <script src="js\load.js"></script>
+    <script src="js\tool.js"></script>
+  </body>
+</html>

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6ff9545e10.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css\user.css" />
+    <link rel="stylesheet" href="css\port.css" />
+
+    <title>user dashboard</title>
+  </head>
+  <body>
+    <div id="loader">
+      <svg
+        version="1.1"
+        id="L3"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 100 100"
+        enable-background="new 0 0 0 0"
+        xml:space="preserve"
+      >
+        <circle
+          fill="none"
+          stroke="#fff"
+          stroke-width="4"
+          cx="50"
+          cy="50"
+          r="44"
+          style="opacity: 0.5"
+        />
+        <circle
+          fill="#fff"
+          stroke="#e74c3c"
+          stroke-width="3"
+          cx="8"
+          cy="54"
+          r="6"
+        >
+          <animateTransform
+            attributeName="transform"
+            dur="2s"
+            type="rotate"
+            from="0 50 48"
+            to="360 50 52"
+            repeatCount="indefinite"
+          />
+        </circle>
+      </svg>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light align-items-center">
+      <a
+        class="navbar-brand mx-5"
+        href="https://www.surgeproxies.com/"
+        target="_blank"
+        ><img class="logo" src="image\logo.svg" alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarNavAltMarkup"
+      >
+        <div class="navbar-nav">
+          <a class="nav-link mx-3" href="/"
+            ><p class="menu click m-0">Home</p>
+          </a>
+          <a class="nav-link mx-3" href="proxy.html"
+            ><p class="menu m-0">Proxies</p></a
+          >
+          <a
+            class="nav-link mx-3"
+            href="
+          https://discord.gg/GMF2YBA2RV"
+            ><p class="menu m-0">
+              <i class="fab fa-discord mr-1"></i> Contact
+            </p></a
+          >
+        </div>
+
+        <button class="ml-auto mx-5 p-2" type="button">
+          <p class="name m-0">Logout</p>
+        </button>
+      </div>
+    </nav>
+    <main
+      class="container-fluid d-flex flex-grow-1 justify-content-center position-relative"
+    >
+      <!-- <img class="background" src="image\background.svg" alt="background"> -->
+      <div class="row no-gutters">
+        <!-- resi -->
+        <div class="modal fade section" id="resiRenew">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content mod">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Residential Renewal</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  <p class="text-light">&times;</p>
+                </button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="c-dropdown js-dropdown mr-1">
+                  <input
+                    type="hidden"
+                    name="Framework"
+                    id="Framework"
+                    class="js-dropdown__input"
+                  />
+                  <span class="c-button c-button--dropdown js-dropdown__current"
+                    >2 GB - 25$</span
+                  >
+                  <ul class="c-dropdown__list">
+                    <li class="c-dropdown__item" data-dropdown-value="angular">
+                      2 GB - 25$
+                    </li>
+                    <li class="c-dropdown__item" data-dropdown-value="angular">
+                      2 GB - 25$
+                    </li>
+                    <li class="c-dropdown__item" data-dropdown-value="angular">
+                      2 GB - 25$
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-dismiss="modal"
+                >
+                  Renew
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- dc -->
+        <div class="modal fade section" id="dcRenew">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content mod">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Datacenter Renewal</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  <p class="text-light">&times;</p>
+                </button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <div class="c-dropdown js-dropdown mr-1">
+                  <input
+                    type="hidden"
+                    name="Framework"
+                    id="Framework"
+                    class="js-dropdown__input"
+                  />
+                  <span class="c-button c-button--dropdown js-dropdown__current"
+                    >25 ISPs - 54$</span
+                  >
+                  <ul class="c-dropdown__list">
+                    <li class="c-dropdown__item" data-dropdown-value="angular">
+                      25 ISPs - 54$
+                    </li>
+                    <li class="c-dropdown__item" data-dropdown-value="angular">
+                      25 ISPs - 54$
+                    </li>
+                    <li class="c-dropdown__item" data-dropdown-value="angular">
+                      25 ISPs - 54$
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-dismiss="modal"
+                >
+                  Renew
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="user col-sm-12 col-md-12 col-lg-5">
+          <div class="profile d-flex">
+            <div class="account_info section mr-4">
+              <div class="profile_info">
+                <div
+                  class="profilePic d-flex align-items-center justify-content-center mb-4"
+                >
+                  <img
+                    class="position-absolute"
+                    src="image\profileBorder.svg"
+                    alt="border"
+                  />
+                  <img class="pic" src="image\foxtasycraft.png" alt="profile" />
+                </div>
+
+                <div class="name text-center">
+                  <h4>Welcome 👋,</h4>
+                  <p>niaguman [FoxyDraft]#8779</p>
+                </div>
+              </div>
+            </div>
+            <div class="videos">
+              <iframe
+                id="ytplayer"
+                type="text/html"
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/?listType=playlist&list=PLOBLg3146cfGnC8JxqGzWaaYcnlzfjUtJ&loop=1&playsinline=1"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="messages section">
+            <div class="notifications p-4">
+              <h5 class="title">Notifications:</h5>
+              <div class="newMsg counter">
+                <i class="fas fa-envelope mr-1"></i>+0
+              </div>
+              <hr />
+            </div>
+            <div class="message section scrollbar-msg">
+              <div class="error_message">
+                <!-- <div class="discord_message"> -->
+                <div class="msgIcon discordMsg mr-5">
+                  <img class="error" src="image\discord.svg" alt="Error" />
+                </div>
+                <div class="talk-bubble tri-right left-in round">
+                  <p class="name">AckWitDaGlock: <span> 14/01/2021</span></p>
+                  <p>
+                    We are conducting some scheduled maintenance on the 154
+                    Subnets. Proxies will be down for a short period of time and
+                    we will announce once they are back up
+                  </p>
+                </div>
+              </div>
+              <div class="error_message">
+                <div class="msgIcon systemMsg mr-5">
+                  <img class="error" src="image\notification.svg" alt="Error" />
+                </div>
+                <div class="talk-bubble system tri-right left-in round">
+                  <p class="name">Important: <span> 14/01/2021</span></p>
+                  <p>Package: Stable/Aio has been extended.</p>
+                </div>
+              </div>
+              <div class="error_message">
+                <!--  <img class="update icon mr-5" src="image\check.svg" alt="Error" /> -->
+                <div class="msgIcon profileIcon mr-5">
+                  <img
+                    class="discordPfp"
+                    src="https://cdn.discordapp.com/attachments/843542661478350899/849407049564553256/sole.gif"
+                    alt="Error"
+                  />
+                </div>
+                <div class="talk-bubble tri-right left-in round">
+                  <p class="name">SolezSnipe: <span> 14/01/2021</span></p>
+                  <p>
+                    @everyone Limited time sale on ISP Renewals & Residential
+                    Top-ups only! ISP Renewal: $50/25 Proxies is a $5 reduction
+                    Residential Top-up: $6.25/GB These prices are for a limited
+                    time and can be reverted back to normal pricing randomly!
+                  </p>
+                </div>
+              </div>
+              <div class="error_message">
+                <div class="msgIcon systemMsg mr-5">
+                  <img class="error" src="image\notification.svg" alt="Error" />
+                </div>
+                <div class="talk-bubble system tri-right left-in round">
+                  <p class="name">Important: <span> 14/01/2021</span></p>
+                  <p>
+                    Subnet: xxx, xxx, xxx xxx, xxx, xxx xxx, xxx, xxx will
+                    expire in 7 days! If you wish to renew, pls use the package
+                    section.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="proxy col-sm-12 col-md-12 col-lg-7">
+          <div class="plan d-flex flex-column">
+            <div class="tabProducts section mb-3 p-4">
+              <h5 class="title">Packages:</h5>
+              <div class="expireAmount counter">Expired: +0</div>
+              <div class="activeAmount counter mr-4">Active: +0</div>
+            </div>
+            <div class="ip table-wrapper-scroll-y scrollbar-light-blue">
+              <ul class="table list-unstyled m-0">
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar dc active"></div>
+                  <div
+                    class="pl ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">DC</p>
+                  </div>
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">28 days</p>
+                      <div class="task_status">
+                        <i class="fas fa-check mr-1"></i>
+                        <p>active</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar"><div class="current"></div></div>
+                    </div>
+                  </div>
+                  <p class="packageName">Monthly</p>
+                  <p class="mb-0 ml-auto">25IPS</p>
+                  <div class="action ml-auto">
+                    <a href="#" data-toggle="modal" data-target="#dcRenew"
+                      ><i class="fas fa-redo-alt renew"></i
+                    ></a>
+                  </div>
+                </li>
+
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar residential active"></div>
+                  <div
+                    class="pl residential ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">RESI</p>
+                  </div>
+
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">20 days</p>
+                      <div class="task_status">
+                        <i class="fas fa-check mr-1"></i>
+                        <p>active</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar residential">
+                        <div class="current"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="packageName">Brute</p>
+                  <p class="mb-0 ml-auto">2GB</p>
+                  <div class="action ml-auto">
+                    <a href="#" data-toggle="modal" data-target="#resiRenew"
+                      ><i class="fas fa-redo-alt renew"></i
+                    ></a>
+                  </div>
+                </li>
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar residential active"></div>
+                  <div
+                    class="pl residential ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">RESI</p>
+                  </div>
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">20 days</p>
+                      <div class="task_status">
+                        <i class="fas fa-check mr-1"></i>
+                        <p>active</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar residential use">
+                        <div class="current"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="packageName">Stable/Aio</p>
+                  <p class="mb-0 ml-auto">22GB</p>
+                  <div class="action ml-auto">
+                    <a href="#" data-toggle="modal" data-target="#resiRenew"
+                      ><i class="fas fa-redo-alt renew"></i
+                    ></a>
+                  </div>
+                </li>
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar dc expiry"></div>
+                  <div
+                    class="pl expired ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">DC</p>
+                  </div>
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">0 day</p>
+                      <div class="task_status">
+                        <i class="fas fa-times-circle mr-1 expire"></i>
+                        <p class="expire">expired</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar used">
+                        <div class="current"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="packageName">Weekly</p>
+                  <p class="mb-0 ml-auto">25IPS</p>
+                  <div class="action ml-auto">
+                    <a href="#"><i class="fas fa-redo-alt renew"></i></a>
+                  </div>
+                </li>
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar dc expiry"></div>
+                  <div
+                    class="pl expired ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">DC</p>
+                  </div>
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">0 day</p>
+                      <div class="task_status">
+                        <i class="fas fa-times-circle mr-1 expire"></i>
+                        <p class="expire">expired</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar used">
+                        <div class="current"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="packageName">Weekly</p>
+                  <p class="mb-0 ml-auto">25IPS</p>
+                  <div class="action ml-auto">
+                    <a href="#"><i class="fas fa-redo-alt renew"></i></a>
+                  </div>
+                </li>
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar residential expiry"></div>
+                  <div
+                    class="pl expired ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">RESI</p>
+                  </div>
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">0 day</p>
+                      <div class="task_status">
+                        <i class="fas fa-times-circle mr-1 expire"></i>
+                        <p class="expire">expired</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar used">
+                        <div class="current"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="packageName">Pool 3</p>
+                  <p class="mb-0 ml-auto">14GB</p>
+                  <div class="action ml-auto">
+                    <a href="#"><i class="fas fa-redo-alt renew"></i></a>
+                  </div>
+                </li>
+                <li class="row no-gutters mb-3 m-0 align-items-center">
+                  <div class="bar dc expiry"></div>
+                  <div
+                    class="pl expired ml-3 d-flex justify-content-center align-items-center"
+                  >
+                    <p class="name m-0 d-inline">DC</p>
+                  </div>
+                  <div class="time_remain">
+                    <div class="status">
+                      <p class="day">0 day</p>
+                      <div class="task_status">
+                        <i class="fas fa-times-circle mr-1 expire"></i>
+                        <p class="expire">expired</p>
+                      </div>
+                    </div>
+                    <div class="progress">
+                      <div class="time_bar used">
+                        <div class="current"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="packageName">Weekly</p>
+                  <p class="mb-0 ml-auto">25IPS</p>
+                  <div class="action ml-auto">
+                    <a href="#"><i class="fas fa-redo-alt renew"></i></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">© SurgeProxies</p>
+      <a href="https://twitter.com/foxydraft" target="_blank">
+        <p class="foxy">🦊</p>
+      </a>
+    </main>
+    <script src="js\load.js"></script>
+    <script src="js\tool.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_278" data-name="Rectangle 278" width="1920" height="1080" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="bgcover" clip-path="url(#clip-path)">
+    <path id="Path_863" data-name="Path 863" d="M0,612.866,1920.169-.8V1310.809H0Z" transform="translate(-0.169 -230.809)" fill="#1e1d2b" opacity="0.64"/>
+  </g>
+</svg>

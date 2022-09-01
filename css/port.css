@@ -1,0 +1,44 @@
+@media screen and (min-width: 2200px) {
+  main {
+    padding: 8rem 15rem !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 1420px) {
+  main {
+    padding: 1.5rem !important;
+    overflow-y: scroll !important;
+  }
+
+  .plan {
+    margin-top: 1.5rem;
+    margin-left: 0;
+  }
+
+  .copyright,
+  .foxy {
+    display: none;
+  }
+
+  .navbar .nav-link .menu:hover {
+    font-weight: 400;
+    color: #ffffff;
+    transform: none;
+    transition: all 0.1s ease-in;
+  }
+
+  .navbar .navbar-nav {
+    text-align: right;
+  }
+
+  .navbar-collapse button {
+    float: right;
+    margin: 1rem 0 !important;
+  }
+}
+
+@media screen and (min-width: 1421px) and (max-width: 1500px) {
+  main {
+    padding: 4rem 2rem !important;
+  }
+}
